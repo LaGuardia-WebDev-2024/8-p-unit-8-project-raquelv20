@@ -1,15 +1,22 @@
 //🟢setup Function - will run once
 setup = function() {
     size(600, 400);
-    background(255,255,255,0);
     
-    drawFish(200, 200, color(200,0,200)); 
-    drawFish(300, 200, color(0,200,200));
+    
+    
+    
 };
+
+var turtle=0;
 
 //🟢draw Function - will run on repeat
 draw = function(){
-
+background(255,255,255,0);
+drawJellyfish(300,300);
+    drawJellyfish(100,100);
+    drawMermaid(250,150);
+    drawTurtle(300 +turtle,350);
+    turtle--
 };
 
 //🟢mouseClicked Function - will run when mouse is clicked
@@ -17,13 +24,25 @@ mouseClicked = function(){
 
 }
 
-//🟡drawFish Function - will run when called
-var drawFish = function(fishX, fishY, fishColor){
+
+
+//🟡drawJellyfish Function - will run when called
+var drawJellyfish = function(jellyfishX, jellyfishY, jellyfishColor){
   textSize(80);
-  fill(fishColor);
-  text("𓆝", fishX, fishY);
+  fill(jellyfishColor);
+  text("🪼", jellyfishX, jellyfishY); 
 };
-
-
+//🟡drawMermaid Function - will run when called
+var drawMermaid = function(mermaidX, mermaidY, mermaidColor){
+  textSize(80);
+  fill(mermaidColor);
+  text("🧜🏻‍♀️", mermaidX, mermaidY); 
+};
+//🟡drawTurtle Function - will run when called
+var drawTurtle = function(turtleX, turtleY, turtleColor){
+  textSize(80);
+  fill(turtleColor);
+  text("🐢", turtleX, turtleY); 
+};
 
 
